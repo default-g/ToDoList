@@ -95,6 +95,7 @@ namespace ToDoList.ViewModels
                 this.Title = "";
                 this.Description = "";
                 this.current = null;
+                this.isEditingExisting = false;
                 this.Content = new FirstViewModel();
             }
         }
