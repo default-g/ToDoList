@@ -12,16 +12,5 @@ namespace ToDoList.ViewModels
     internal class FirstViewModel : ViewModelBase
     {
 
-        private Dictionary<DateTimeOffset, List<ToDo>> ListsOnDays;
-
-        public FirstViewModel(ref Dictionary<DateTimeOffset, List<ToDo>> ListsOnDays)
-        {
-            this.ListsOnDays = ListsOnDays;
-            
-        }
-       
-
-        
-
     }
 }

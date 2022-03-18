@@ -62,7 +62,7 @@ namespace ToDoList.ViewModels
         {
             this.ListsOnDays = new Dictionary<DateTimeOffset, List<ToDo>>();
             this.Items = new ObservableCollection<ToDo>();
-            this.Content = new FirstViewModel(ref this.ListsOnDays);
+            this.Content = new FirstViewModel();
         }
 
         private void InitToDoList()
@@ -95,7 +95,7 @@ namespace ToDoList.ViewModels
                 this.Title = "";
                 this.Description = "";
                 this.current = null;
-                this.Content = new FirstViewModel(ref this.ListsOnDays);
+                this.Content = new FirstViewModel();
             }
         }
 
