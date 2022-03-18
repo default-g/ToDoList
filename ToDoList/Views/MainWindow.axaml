@@ -9,36 +9,15 @@
 		    MinWidth="400" MinHeight="500"
         x:Class="ToDoList.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="ToDoList">
+        Title="ToDoList"
+		Content="{Binding Content}"
+		>
+	    
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-	<Grid ShowGridLines="True">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="0.1*"></RowDefinition>
-				<RowDefinition Height="1*"></RowDefinition>
-				<RowDefinition Height="0.1*"></RowDefinition>
-			
-			</Grid.RowDefinitions>
-		<DatePicker SelectedDate="{Binding Date}" Name="DatePicker1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-
-		<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-			<ItemsControl Items="{Binding Items}" Name="Items">
-				<ItemsControl.ItemTemplate>
-					<DataTemplate>
-						<Grid RowDefinitions="*" ColumnDefinitions="*,*,*" ShowGridLines="True">
-							<TextBlock Text="{Binding Title}" Name="Title" Grid.Row="0" Grid.Column="0"/>
-						</Grid>
-					</DataTemplate>
-				</ItemsControl.ItemTemplate>
-			</ItemsControl>
-			
-		</ScrollViewer>
-		<Button Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-			<Image Source="/Assets/add.ico"  />
-		</Button>
-	</Grid>
+    
     
 </Window>

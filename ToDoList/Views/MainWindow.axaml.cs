@@ -11,9 +11,6 @@ namespace ToDoList.Views
         public MainWindow()
         {
             InitializeComponent();
-           
-     
-            
         }
     }
 }
